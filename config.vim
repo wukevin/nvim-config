@@ -72,7 +72,9 @@ Plug 'majutsushi/tagbar'
 Plug 'vim-scripts/IndexedSearch'
 " A couple of nice colorschemes
 " Plug 'fisadev/fisa-vim-colorscheme'
-Plug 'patstockwell/vim-monokai-tasty'
+" Plug 'patstockwell/vim-monokai-tasty'
+" Plug 'jacoborus/tender.vim'
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
 " Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -215,12 +217,16 @@ set nu
 " remove ugly vertical lines on window division
 set fillchars+=vert:\ 
 
+if (has("termguicolors"))
+    set termguicolors
+endif
+
 " use 256 colors when possible
 if has('gui_running') || using_neovim || (&term =~? 'mlterm\|xterm\|xterm-256\|screen-256')
     if !has('gui_running')
         let &t_Co = 256
     endif
-    colorscheme vim-monokai-tasty
+    colorscheme onehalfdark
 else
     colorscheme delek
 endif
