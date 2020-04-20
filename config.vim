@@ -74,7 +74,8 @@ Plug 'vim-scripts/IndexedSearch'
 " Plug 'fisadev/fisa-vim-colorscheme'
 " Plug 'patstockwell/vim-monokai-tasty'
 " Plug 'jacoborus/tender.vim'
-Plug 'sonph/onehalf', {'rtp': 'vim/'}
+" Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'arcticicestudio/nord-vim'
 " Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -226,7 +227,7 @@ if has('gui_running') || using_neovim || (&term =~? 'mlterm\|xterm\|xterm-256\|s
     if !has('gui_running')
         let &t_Co = 256
     endif
-    colorscheme onehalfdark
+    colorscheme nord
 else
     colorscheme delek
 endif
@@ -493,7 +494,7 @@ endif
 " Airline ------------------------------
 
 let g:airline_powerline_fonts = 0
-let g:airline_theme = 'bubblegum'
+let g:airline_theme = 'nord'
 let g:airline#extensions#whitespace#enabled = 0
 
 " Fancy Symbols!!
