@@ -137,6 +137,8 @@ Plug 'neomake/neomake'
 Plug 'myusuf3/numbers.vim'
 " Nice icons in the file explorer and file type status line.
 Plug 'ryanoasis/vim-devicons'
+" Black for Python prettying
+Plug 'psf/black'
 
 if using_vim
     " Consoles as buffers (neovim has its own consoles as buffers)
