@@ -264,6 +264,9 @@ nnoremap <silent> // :noh<CR>
 " clear empty spaces at the end of lines on save of python files
 autocmd BufWritePre *.py :%s/\s\+$//e
 
+" run Black when saving Python files
+autocmd BufWritePre *.py execute ':Black'
+
 " fix problems with uncommon shells (fish, xonsh) and plugins running commands
 " (neomake, ...)
 set shell=/bin/bash 
